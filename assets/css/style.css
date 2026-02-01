@@ -1,0 +1,476 @@
+/* Reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #222;
+    background-color: #f5f5f7;
+}
+
+/* Layout */
+
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+
+.site-header {
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 1rem 1.25rem;
+}
+
+.site-header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.site-header__title {
+    margin: 0;
+    font-size: 1.35rem;
+}
+
+/* Navigation */
+
+.site-nav__list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 0.75rem;
+}
+
+.site-nav__link {
+    text-decoration: none;
+    color: #e5e7eb;
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus-visible {
+    background-color: #0f172a;
+    color: #ffffff;
+}
+
+/* Main content */
+
+.site-main {
+    flex: 1;
+    padding: 1.5rem 1.25rem 2rem;
+}
+
+.page {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Page header */
+
+.page__header {
+    margin-bottom: 1.5rem;
+}
+
+.page__title {
+    margin: 0 0 0.25rem;
+    font-size: 1.5rem;
+    color: #111827;
+}
+
+.page__subtitle {
+    margin: 0;
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+/* Page sections */
+
+.page__section {
+    margin-bottom: 1.75rem;
+}
+
+/* Filter form */
+
+.filter-form {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+.filter-form__fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-form__legend {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #111827;
+}
+
+.filter-form__grid {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.filter-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.filter-form__label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.filter-form__input,
+.filter-form__select {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 0.45rem 0.6rem;
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.filter-form__input:focus,
+.filter-form__select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
+}
+
+.filter-form__actions {
+    margin-top: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Property list & cards */
+
+.property-list__empty {
+    padding: 0.75rem 0;
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+.property-card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+}
+
+.property-card__header {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+}
+
+.property-card__title {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #111827;
+}
+
+.property-card__content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+}
+
+.property-card__media {
+    margin: 0;
+}
+
+.property-card__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.property-card__details {
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+.property-card__detail {
+    margin: 0.1rem 0;
+}
+
+.property-card__label {
+    font-weight: 600;
+    margin-right: 0.25rem;
+}
+
+.property-card__description {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.property-card__footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+/* Property form */
+
+.property-form {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+.property-form__fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.property-form__legend {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #111827;
+}
+
+.property-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 0.7rem;
+}
+
+.property-form__label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.property-form__input,
+.property-form__select,
+.property-form__textarea {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 0.45rem 0.6rem;
+    font-size: 0.9rem;
+    font-family: inherit;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.property-form__input:focus,
+.property-form__select:focus,
+.property-form__textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
+}
+
+.property-form__textarea {
+    resize: vertical;
+    min-height: 5rem;
+}
+
+.property-form__hint {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.property-form__preview {
+    margin: 0.25rem 0 0;
+}
+
+.property-form__preview-image {
+    max-width: 160px;
+    border-radius: 0.5rem;
+}
+
+.property-form__actions {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Buttons */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem 0.9rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.button--primary {
+    background-color: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+
+.button--primary:hover,
+.button--primary:focus-visible {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+.button--secondary {
+    background-color: #ffffff;
+    color: #374151;
+    border-color: #d1d5db;
+}
+
+.button--secondary:hover,
+.button--secondary:focus-visible {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.button--danger {
+    background-color: #dc2626;
+    color: #ffffff;
+    border-color: #dc2626;
+}
+
+.button--danger:hover,
+.button--danger:focus-visible {
+    background-color: #b91c1c;
+    border-color: #b91c1c;
+}
+
+.button--small {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.8rem;
+}
+
+/* Notifications */
+
+.notification {
+    list-style: none;
+    margin: 0;
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.notification--error {
+    background-color: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+/* Footer */
+
+.site-footer {
+    padding: 0.9rem 1.25rem;
+    background-color: #0f172a;
+    color: #9ca3af;
+    font-size: 0.85rem;
+}
+
+.site-footer__text {
+    margin: 0;
+    text-align: center;
+}
+
+/* Media queries */
+
+/* Medium screens: improve layouts */
+@media (min-width: 640px) {
+    .filter-form__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .property-card__content {
+        grid-template-columns: 220px minmax(0, 1fr);
+        align-items: flex-start;
+    }
+}
+
+/* Large screens: more columns and spacing */
+@media (min-width: 900px) {
+    .site-main {
+        padding: 2rem 1.5rem 2.5rem;
+    }
+
+    .filter-form {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .filter-form__grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .property-card {
+        padding: 1.1rem 1.25rem;
+    }
+
+    .property-card__title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Very small screens: stack header nicely */
+@media (max-width: 480px) {
+    .site-header__inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-nav__list {
+        flex-wrap: wrap;
+    }
+
+    .filter-form__actions,
+    .property-form__actions,
+    .property-card__footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .button {
+        width: 100%;
+        justify-content: center;
+    }
+}
